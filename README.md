@@ -5,7 +5,7 @@
 # EXAMPLE
 
 ```console
-$ make
+$ Vshifty "00091C080F5E"
 ...
 ```
 

@@ -1,19 +1,17 @@
-module dec2byte(input byte x, output byte y)
-    // ...
-endmodule
+`include "dec_decoder.sv"
 
-module hex2byte(input byte x, output byte y)
-    // ...
-endmodule
 
-module shifty(input byte [23:0] hash, output byte [10:0] password)
+
+/* verilator lint_off UNUSED */
+
+module shifty(input bit [191:0] hash, output byte seed);
     byte seed_upper,
          seed_lower;
 
-    dec2byte d2b(hash[0], seed_upper);
-    dec2byte d2b(hash[1], seed_lower);
+    dec_decoder dd1(hash[7:0], seed_upper);
+    dec_decoder dd2(hash[15:8], seed_lower);
 
-    byte seed = 10 * seed_upper + seed_lower;
+    assign seed = 10 * seed_upper + seed_lower;
 
     // ...
 endmodule
