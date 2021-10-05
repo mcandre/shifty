@@ -2,7 +2,7 @@ ARTIFACT=obj_dir/Vshifty
 
 all: test
 
-$(ARTIFACT): main.cpp shifty.sv dec_decoder.sv
+$(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 	@verilator \
 		-Wall \
 		--cc \
