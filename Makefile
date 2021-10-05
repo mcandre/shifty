@@ -15,8 +15,14 @@ $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 		-f Vshifty.mk \
 		Vshifty
 
-test: $(ARTIFACT)
-	@$(ARTIFACT) "00091C080F5E"
+test:
+	$(ARTIFACT) "00091C080F5E"
+
+install: $(ARTIFACT)
+	cp $(ARTIFACT) ~/bin/shifty
+
+uninstall:
+	-rm ~/bin/shifty
 
 clean:
 	-rm -rf obj_dir

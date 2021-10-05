@@ -3,13 +3,13 @@
 
 module shifty(input bit [191:0] hash, output bit [87:0] password);
     bit [215:0] secret = {
-        8'h64, 8'h73, 8'h66, 8'h64,
-        8'h3b, 8'h6b, 8'h66, 8'h6f,
-        8'h41, 8'h2c, 8'h2e, 8'h69,
-        8'h79, 8'h65, 8'h77, 8'h72,
-        8'h6b, 8'h6c, 8'h64, 8'h4a,
-        8'h4b, 8'h44, 8'h48, 8'h53,
-        8'h55, 8'h42, 8'h73
+        8'h73, 8'h42, 8'h55, 8'h53,
+        8'h48, 8'h44, 8'h4b, 8'h4a,
+        8'h64, 8'h6c, 8'h6b, 8'h72,
+        8'h77, 8'h65, 8'h79, 8'h69,
+        8'h2e, 8'h2c, 8'h41, 8'h6f,
+        8'h66, 8'h6b, 8'h3b, 8'h64,
+        8'h66, 8'h73, 8'h64
     };
 
     byte seed_upper,

@@ -26,6 +26,7 @@ int main(int argc, const char **argv) {
     top->eval();
     (void) std::memcpy(password_buf, top->password, sizeof(password_buf));
     (void) strncpy(password, password_buf, 11);
+    password[strlen(hash_buf)/2 - 1] = '\0';
     std::cout << password << std::endl;
     delete top;
     return EXIT_SUCCESS;
