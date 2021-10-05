@@ -1,4 +1,4 @@
-# shifty: an RTL type 7 password cracker
+# shifty: RTL type 7 password cracker
 
 ![UV glowing scorpion](shifty.png)
 
