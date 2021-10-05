@@ -17,22 +17,16 @@ int main(int argc, const char **argv) {
         return EXIT_FAILURE;
     }
 
-    char hash[24] = { 0 };
-
-    char ciphertext[23] = { 0 };
-
-    // char password[12] = { 0 };
-    (void) strncpy(hash, argv[1], sizeof(hash));
+    char hash_buf[24] = { 0 };
+    char password_buf[11] = { 0 };
+    char password[12] = { 0 };
+    (void) strncpy(hash_buf, argv[1], sizeof(hash_buf));
     Vshifty *top = new Vshifty{"top"};
-    (void) std::memcpy(top->hash, hash, sizeof(hash));
+    (void) std::memcpy(top->hash, hash_buf, sizeof(hash_buf));
     top->eval();
-
-
-    (void) std::memcpy(ciphertext, top->ciphertext, sizeof(ciphertext));
-    std::cerr << "Ciphertext: " << ciphertext << std::endl;
-
-    // (void) strncpy(password, top->password, 11);
-    // std::cout << password << std::endl;
+    (void) std::memcpy(password_buf, top->password, sizeof(password_buf));
+    (void) strncpy(password, password_buf, 11);
+    std::cout << password << std::endl;
     delete top;
     return EXIT_SUCCESS;
 }
