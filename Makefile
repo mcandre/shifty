@@ -16,10 +16,10 @@ $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 		Vshifty
 
 test: $(ARTIFACT)
-	$(ARTIFACT) "00091C080F5E"
+	@$(ARTIFACT) "00091C080F5E"
 
 install: $(ARTIFACT)
-	cp $(ARTIFACT) ~/bin/shifty
+	@cp $(ARTIFACT) ~/bin/shifty
 
 uninstall:
 	-rm ~/bin/shifty

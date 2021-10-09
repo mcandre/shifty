@@ -21,7 +21,7 @@ int main(int argc, const char **argv) {
     char password_buf[11] = { 0 };
     char password[12] = { 0 };
     (void) strncpy(hash_buf, argv[1], sizeof(hash_buf));
-    Vshifty *top = new Vshifty{"top"};
+    auto *top = new Vshifty{"top"};
     (void) std::memcpy(top->hash, hash_buf, sizeof(hash_buf));
     top->eval();
     (void) std::memcpy(password_buf, top->password, sizeof(password_buf));
