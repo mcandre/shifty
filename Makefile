@@ -15,7 +15,7 @@ $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 		-f Vshifty.mk \
 		Vshifty
 
-test:
+test: $(ARTIFACT)
 	$(ARTIFACT) "00091C080F5E"
 
 install: $(ARTIFACT)
