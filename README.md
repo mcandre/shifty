@@ -1,4 +1,4 @@
-# shifty: FPGA password cracking
+# shifty: FPGA password cracker
 
 ![UV glowing scorpion](shifty.png)
 
