@@ -2,7 +2,7 @@
 
 * [g++](https://gcc.gnu.org/) 9+
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
-* [GNU make](https://www.gnu.org/software/make/) 3+
+* [make](https://pubs.opengroup.org/onlinepubs/009695299/utilities/make.html)
 * a POSIX compatible [sh](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html) implementation
 * GNU compatible [findutils](https://www.gnu.org/software/findutils/)
 * [Go](https://go.dev/) 1.20.2+ with `go install github.com/mcandre/accio/cmd/accio@v0.0.4` and `accio -install`
