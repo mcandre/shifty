@@ -4,22 +4,10 @@ ARTIFACT=obj_dir/Vshifty
 
 all: test
 
-checkmake:
-	@find . \
-		-type f \
-		\( \
-			-iname Makefile -o \
-			-iname GNUmakefile -o \
-			-iname '*.mk' -o \
-			-iname '*.make' \
-		\) \
-		-print0 | \
-			xargs -0 -n 1 checkmake
-
 unmake:
 	@unmake makefile
 
-lint: checkmake unmake
+lint: unmake
 
 $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 	@verilator \
