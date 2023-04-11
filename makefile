@@ -16,10 +16,10 @@ checkmake:
 		-print0 | \
 			xargs -0 -n 1 checkmake
 
-yamllint:
-	yamllint .
+unmake:
+	@unmake makefile
 
-lint: checkmake yamllint
+lint: checkmake unmake
 
 $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 	@verilator \
