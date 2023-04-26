@@ -6,8 +6,7 @@
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
 * [GNU findutils](https://www.gnu.org/software/findutils/)
 * a POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html) implementation (e.g. GNU make, BSD make, etc.)
-* a POSIX compliant [sh](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/sh.html) implementation (e.g., bash, ksh, zsh, etc.)
-* Provision additional dev tools with `./install`
+* Provision additional dev tools with `make -f install.mk`
 
 ## Recommended
 

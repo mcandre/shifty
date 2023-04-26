@@ -6,6 +6,7 @@ all: test
 
 unmake:
 	@unmake makefile
+	@unmake install.mk
 
 lint: unmake
 
