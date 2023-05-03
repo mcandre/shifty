@@ -1,36 +1,38 @@
-.PHONY: all lint test clean
+.POSIX:
+.SILENT:
+.PHONY: all lint test install uninstall clean
+.IGNORE: uninstall clean
 
 ARTIFACT=obj_dir/Vshifty
 
 all: test
 
 unmake:
-	@unmake makefile
-	@unmake install.mk
+	unmake .
 
 lint: unmake
 
 $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
-	@verilator \
+	verilator \
 		-Wall \
 		--cc \
 		--exe \
 		main.cpp \
 		shifty.sv
-	@make \
+	make \
 		-j \
 		-C obj_dir \
 		-f Vshifty.mk \
 		Vshifty
 
 test: $(ARTIFACT)
-	@$(ARTIFACT) "00091C080F5E"
+	$(ARTIFACT) "00091C080F5E"
 
 install: $(ARTIFACT)
-	@cp $(ARTIFACT) ~/bin/shifty
+	cp $(ARTIFACT) ~/bin/shifty
 
 uninstall:
-	-rm ~/bin/shifty
+	rm ~/bin/shifty
 
 clean:
-	-rm -rf obj_dir
+	rm -rf obj_dir
