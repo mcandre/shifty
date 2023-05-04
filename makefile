@@ -1,7 +1,13 @@
 .POSIX:
 .SILENT:
-.PHONY: all lint test install uninstall clean
 .IGNORE: uninstall clean
+.PHONY: \
+	all \
+	lint \
+	install \
+	uninstall \
+	test \
+	clean
 
 ARTIFACT=obj_dir/Vshifty
 
