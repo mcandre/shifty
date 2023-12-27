@@ -15,7 +15,7 @@ shifty cracks classic Cisco network device passwords.
 
 # LICENSE
 
-FreeBSD
+BSD-2-Clause
 
 # REQUIREMENTS
 
