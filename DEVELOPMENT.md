@@ -1,7 +1,7 @@
 # BUILDTIME REQUIREMENTS
 
 * [g++](https://gcc.gnu.org/) 9+
-* [Python](https://www.python.org/) 3.11.2+
+* [Python](https://www.python.org/) 3.12.1+
 * [Rust](https://www.rust-lang.org/en-US/) 1.68.2+
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
 * [GNU findutils](https://www.gnu.org/software/findutils/)
