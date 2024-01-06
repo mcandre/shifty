@@ -15,6 +15,7 @@ all: test
 
 unmake:
 	unmake .
+	unmake -n .
 
 lint: unmake
 

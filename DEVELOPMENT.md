@@ -2,7 +2,7 @@
 
 * [g++](https://gcc.gnu.org/) 9+
 * [Python](https://www.python.org/) 3.12.1+
-* [Rust](https://www.rust-lang.org/en-US/) 1.68.2+
+* [Rust](https://www.rust-lang.org/en-US/) 1.75.0+
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
 * [GNU findutils](https://www.gnu.org/software/findutils/)
 * a POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html) implementation (e.g. GNU make, BSD make, etc.)
