@@ -13,6 +13,11 @@ ARTIFACT=obj_dir/Vshifty
 
 all: test
 
+audit: snyk
+
+snyk:
+	snyk test
+
 unmake:
 	unmake .
 	unmake -n .
