@@ -4,6 +4,7 @@
 * POSIX compatible [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html)
 * [Python](https://www.python.org/) 3.12.1+
 * [Rust](https://www.rust-lang.org/en-US/) 1.75.0+
+* [Snyk](https://snyk.io/)
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
 * Provision additional dev tools with `make -f install.mk`
 
