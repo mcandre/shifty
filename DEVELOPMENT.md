@@ -1,12 +1,12 @@
 # BUILDTIME REQUIREMENTS
 
 * [g++](https://gcc.gnu.org/) 9+
-* POSIX compatible [make](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html)
+* [GNU](https://www.gnu.org/software/make/) / [BSD](https://man.freebsd.org/cgi/man.cgi?make(1)) make
 * [Python](https://www.python.org/) 3.12.1+
 * [Rust](https://www.rust-lang.org/en-US/) 1.75.0+
 * [Snyk](https://snyk.io/)
 * [verilator](https://www.veripool.org/verilator/) 4.212-48-g2560fc86 or higher
-* Provision additional dev tools with `make -f install.mk`
+* Provision additional dev tools with `make -j 4 -f install.mk`
 
 ## Recommended
 
