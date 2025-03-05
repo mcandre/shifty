@@ -3,17 +3,24 @@
 .IGNORE: uninstall clean
 .PHONY: \
 	all \
+	audit \
+	clean \
+	cpplint \
 	lint \
 	install \
-	uninstall \
+	snyk \
 	test \
-	clean
+	uninstall \
+	unmake
 
 ARTIFACT=obj_dir/Vshifty
 
 all: test
 
 audit: snyk
+
+cpplint:
+	.venv/bin/cpplint --recursive .
 
 snyk:
 	snyk test
@@ -22,7 +29,7 @@ unmake:
 	unmake .
 	unmake -n .
 
-lint: unmake
+lint: cpplint unmake
 
 $(ARTIFACT): main.cpp shifty.sv dec_decoder.sv hex_decoder.sv
 	verilator \
