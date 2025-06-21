@@ -1,7 +1,7 @@
 .POSIX:
 .SILENT:
 .IGNORE: uninstall clean
-ALLTARGETS!=ls -a *
+ALLTARGETS!=ls -a
 .PHONY: $(ALLTARGETS)
 
 ARTIFACT=obj_dir/Vshifty
