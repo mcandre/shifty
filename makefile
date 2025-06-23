@@ -14,7 +14,7 @@ cpplint:
 	.venv/bin/cpplint --recursive .
 
 snyk:
-	snyk test
+	snyk test --all-projects
 
 unmake:
 	unmake .
