@@ -1,8 +1,16 @@
 .POSIX:
 .SILENT:
-.IGNORE: uninstall clean
-ALLTARGETS!=ls -a
-.PHONY: $(ALLTARGETS)
+.PHONY: \
+	all \
+	audit \
+	clean \
+	cpplint \
+	install \
+	lint \
+	snyk \
+	test \
+	uninstall \
+	unmake
 
 ARTIFACT=obj_dir/Vshifty
 
